@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "/bet10000/static/css/main.3e2d2965.css",
+    "main.js": "/bet10000/static/js/main.88da01aa.js",
+    "static/js/453.a4cb5c95.chunk.js": "/bet10000/static/js/453.a4cb5c95.chunk.js",
+    "static/media/logo-pigrecoemme.png": "/bet10000/static/media/logo-pigrecoemme.8b8fcec6cdc95ecf93e5.png",
+    "static/media/horse.png": "/bet10000/static/media/horse.151a46b49e27be90f5d8.png",
+    "index.html": "/bet10000/index.html",
+    "main.3e2d2965.css.map": "/bet10000/static/css/main.3e2d2965.css.map",
+    "main.88da01aa.js.map": "/bet10000/static/js/main.88da01aa.js.map",
+    "453.a4cb5c95.chunk.js.map": "/bet10000/static/js/453.a4cb5c95.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.3e2d2965.css",
+    "static/js/main.88da01aa.js"
+  ]
+}
