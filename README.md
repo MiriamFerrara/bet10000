@@ -1,3 +1,42 @@
+# Bet10000
+
+🔗 Link al repository: https://github.com/MiriamFerrara/bet10000
+
+## Introduzione
+Bet10000 è un'applicazione React per scommesse simulate sui cavalli, creata con Create React App.
+
+## Come avviare il progetto
+
+### Prerequisiti
+- Node.js installato
+- npm installato
+
+### Comandi disponibili
+
+Nel terminale, nella cartella del progetto:
+
+#### `npm start`
+Avvia l'app in modalità sviluppo.  
+Apri [http://localhost:3000](http://localhost:3000) nel browser per visualizzarla.
+
+#### `npm test`
+Avvia i test.
+
+#### `npm run build`
+Crea una versione ottimizzata per la produzione.
+
+#### `npm run eject`
+**Attenzione:** questa operazione è irreversibile. Consente di accedere alla configurazione interna di Create React App.
+
+## Risorse utili
+
+- Documentazione Create React App:  
+  https://facebook.github.io/create-react-app/docs/getting-started
+
+- Documentazione React:  
+  https://reactjs.org/
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
@@ -68,3 +107,5 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## Autrice
+Miriam Ferrara
