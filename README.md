@@ -1,6 +1,6 @@
 # Bet10000
 
-🔗 Link al repository: https://github.com/MiriamFerrara/bet10000
+🔗 Link al repository: https://miriamferrara.github.io/bet10000/
 
 ## Introduzione
 Bet10000 è un'applicazione React per scommesse simulate sui cavalli, creata con Create React App.
