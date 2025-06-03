@@ -1,38 +1,383 @@
-.App {
-  text-align: center;
+html, body {
+  width: 100%;
+}
+body {
+  font-family: Arial, sans-serif;
+  background-color: #fff;   /* Sfondo bianco */
+  color: #000;              /* Testo nero */
+  text-align: center;     /* Centra il testo nella pagina */
+  overflow-x: hidden; /* Rimuove scroll orizzontale */
+}
+/** HEADER **/
+.logo {
+  height: auto;    /* Mantiene proporzioni dell’immagine */
+  margin-left: -100px;
+  margin-right: -100px;
+  max-width: 1200px;
+  object-fit: cover;
+  object-position: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+@media (min-width: 768px) {
+  .logo {
+    max-width: 1200px;
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+@media (min-width: 1200px) {
+  .logo {
+    max-width: 1200px;
+  }
+}
+
+/** INTESTAZIONE **/
+.benvenuto {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin: 20px 0;
+  color: black;
+}
+
+.highlight {
+  color: blue;
+}
+
+.saldo {
+  color: blue;
+  font-weight: bold;
+}
+
+.sottotesto {
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: black;
+  margin-top: 10px;
+  display: inline-block;
+}
+
+.vincente {
+  color: blue;
+  font-weight: bold;
+  font-size: 1.6rem;
+}
+/** VISUALIZZA CARD CAVALLI **/
+.cavalli {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+  margin: 20px auto;
+  max-width: 1000px; /* Più spazio per contenere 4 card comode */
+}
+
+.cavallo-card {
+  width: calc(20% - 15px);        /* 4 per riga con gap */
+  background-color:#4682B4; /* Blu di Prussia */
+  box-shadow: 0 0 5px #66c2ff;
+  border-radius: 15px;
+  padding: 5px;
+  min-height: 150px;
+  color: white;
+  cursor: pointer;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.cavallo-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 15px #90e0ef;
+}
+
+.nome-cavallo {
+  color: white;                   /* Testo leggibile sul celeste scuro */
+  font-weight: bold;
+  font-size:20px;
+  text-align: center;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.barra {
+  height: 10px;
+  margin: 10px 0;
+  border-radius: 5px;
+  width: 90%;
+  background-color: #87CEEB; /* Blu Cielo */
+}
+
+@media (max-width: 768px) {
+  .cavallo-card {
+    width: calc(50% - 15px); /* 2 per riga su tablet/mobile */
+  }
+}
+
+@media (max-width: 480px) {
+  .cavallo-card {
+    width: 100%; /* 1 per riga su smartphone piccoli */
+  }
+}
+
+
+.giocata {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  margin: 40px 0 20px;
+}
+
+.giocata-titolo {
+  font-size: 1.5rem;
+  color: black;
+  text-align: center;
+  font-weight: bold;
+  font-family: 'Georgia', serif;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+  margin: 0;
+}
+
+.giocata-input-wrapper {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  gap: 10px;
+  margin: 0;
+}
+
+.input-importo {
+  padding: 5px 5px;
+  font-size: 1.5rem;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  outline: none;
+  transition: all 0.3s ease;
+  width: 42%;
+}
+
+.input-importo:focus {
+  border-color: #ffaa33;
+  box-shadow: 0 0 10px rgba(255, 170, 51, 0.6);
+}
+
+.bottoni-riga {
+  display: flex;
+  justify-content: center; /* o 'space-around' / 'space-between' */
+ gap: 10px;
+   margin-top: 10px;
+   width: 65%;
+}
+
+.bottoni-colonna {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 10px;
+  width: 65%;
+  text-align: center;
+  margin-bottom:60px; /* spazio sotto il primo bottone */
+}
+
+button {
+  font-size: 1.4rem;
+  font-weight: bold;
+  padding: 15px 30px;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+  width: 100%;
+}
+
+button:hover {
+  transform: scale(1.05);
+}
+
+.btn-verde {
+  background-color: #28a745;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.btn-verde:hover {
+  background-color: #3ed657;
+  color: black;
 }
 
-@keyframes App-logo-spin {
+.btn-blu {
+  margin-right: 15px;
+  padding:20px 24px;
+  font-size: 22px;
+  background-color: #1E90FF; /* Blu */
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.btn-blu:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 10px orange;
+}
+
+.btn-reset {
+  background-color: #dc3545;
+  color: white;
+}
+
+.btn-reset:hover {
+  background-color: #ff4d4d;
+}
+
+.altro-btn {
+  background-color: #444;
+  color: white;
+  padding: 12px 25px;
+  font-size: 1rem;
+  border: 2px solid orange;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.altro-btn:hover {
+  background-color: orange;
+  color: black;
+}
+
+
+/* === STILE PER IL MESSAGGIO DI CONFERMA === */
+.messaggio-conferma {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.95); /* Sfondo bianco semi-trasparente */
+  z-index: 9999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+.contenuto-messaggio {
+  background: #ffffff; /* Sfondo completamente bianco */
+  padding: 30px;
+  border-radius: 15px;
+  text-align: left;
+  max-width: 600px;
+  font-size: 23px;
+  line-height: 1.5;
+  color: #000000; /* Testo nero */
+  box-shadow: 0 0 25px rgba(30, 144, 255, 0.4); /* Blu chiaro */
+  border: 3px solid #1E90FF; /* Blu acceso */
+  font-weight: normal;
+  animation: zoomIn 0.3s ease-in-out;
+  overflow-y: auto;
+  max-height: 90vh;
+}
+
+.contenuto-messaggio span {
+  color: #1E90FF; /* Blu */
+  font-weight: bold;
+
+}
+
+.btn-chiudi {
+  margin-top: 25px;
+  margin-right: 15px;
+  padding: 12px 24px;
+  font-size: 18px;
+  background-color: #1E90FF; /* Blu */
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.btn-chiudi:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 10px #1E90FF;
+}
+
+/* Animazioni */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes zoomIn {
   from {
-    transform: rotate(0deg);
+    transform: scale(0.9);
+    opacity: 0;
   }
   to {
-    transform: rotate(360deg);
+    transform: scale(1);
+    opacity: 1;
   }
+}
+/* === NUOVI STILI PER IL MESSAGGIO === */
+.titolo-messaggio {
+  font-size: 36px;
+  font-weight: bold;
+  display: block;
+  margin-bottom: 10px;
+  margin-top: 20px;       /* Margine superiore */
+  text-align: center; /* Titolo centrato */
+}
+
+.esito-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin-top: 50px;
+  padding: 50px;
+}
+
+
+.titolo-span {
+  color: #1E90FF; /* Blu */
+  font-weight: bold;
+  font-size: 36px;
+}
+.messaggio-esito {
+font-size: 26px;
+}
+.messaggio-esito-testo {
+font-size: 26px;
+color: #1E90FF; /* Blu */
+ font-weight: bold;
+}
+
+/**tabelle**/
+.tabella-statistiche {
+  width: 98%;
+  margin: 20px auto;
+  border-collapse: collapse;
+  font-size: 16px;
+}
+
+.tabella-statistiche th,
+.tabella-statistiche td {
+  border: 1px solid #ccc;
+  padding: 8px 12px;
+  text-align: left;
+}
+
+.tabella-statistiche th {
+  background-color: #f0f0f0;
+  color: #333;
+}
+
+.tabella-statistiche tr:nth-child(even) {
+  background-color: #f9f9f9;
 }
