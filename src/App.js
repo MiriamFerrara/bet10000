@@ -175,7 +175,9 @@ const confermaModaleAltro = () => {
   return (
   <div>
      <header>
+     <div class="logo-container">
          <img src={logo} alt="logo" className="logo" />
+           </div>
      </header>
 
 
