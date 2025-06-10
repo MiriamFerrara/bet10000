@@ -1,6 +1,6 @@
 import React, { useState, useRef, useEffect } from 'react';
 import './App.css';
-import logo from './assets/logo-pigrecoemme.png';
+import logo from './assets/logo-2.png';
 import horse from './assets/horse.png';
 const cavalliIniziali = [
   { nome: 'FURIA', colore: '#28a745' },         // Verde smeraldo
@@ -179,15 +179,15 @@ const confermaModaleAltro = () => {
          <img src={logo} alt="logo" className="logo" />
            </div>
      </header>
-
+<div class="spacer"></div>
 
     {mostraPaginaScommessa && (
       <>
         <p className="benvenuto">
-          Benvenuto <span className="highlight"><strong>{nome}</strong></span><br />
+          Benvenuto <span className="highlight"><strong>{nome}</strong> Zarrella</span><br />
           Il tuo saldo attuale è: <span className="saldo"><strong>{saldo}€</strong></span><br />
           <span className="sottotesto">
-            Inizia a scommettere... Scegli il tuo <span className="vincente">cavallo vincente</span>
+            Inizia a scommettere...
           </span>
         </p>
 
@@ -195,7 +195,7 @@ const confermaModaleAltro = () => {
 
         <div className="giocata">
           <div className="giocata-input-wrapper">
-            <h2 className="giocata-titolo">Quanto vuoi puntare:</h2>
+            <h2 className="giocata-titolo">Quanto vuoi puntare: €</h2>
             <input
               type="number"
               className="input-importo"

@@ -1,18 +1,24 @@
 html, body {
   width: 100%;
+    margin: 0; /* AZZERA I MARGINI PREDEFINITI DEL BROWSER */
+    padding: 0; /* AZZERA IL PADDING PREDEFINITO DEL BROWSER */
 }
 
 body {
   font-family: Arial, sans-serif;
-  background-color: #fff;
-  color: #000;
-  text-align: center;
-  overflow-x: hidden;
+  background: linear-gradient(to right,#5DE1E6, #2B90C8, #004AAD); /* Colori scelti per replicare la sfumatura dell'immagine */
+   color: #000; /* Il colore del testo principale */
+   text-align: center;
+   overflow-x: hidden;
+   min-height: 100vh; /* Assicura che la sfumatura copra l'intera altezza del viewport */
+
 }
 
-/** HEADER **/
+/* --- INTESTAZIONE --- */
+/* Stili per il contenitore del logo e l'immagine del logo stesso */
 .logo-container {
   max-width: 100%;
+   width: 100%; /* Assicurati che sia presente per default */
   overflow: hidden;
   padding: 0;
   margin: 0 auto;
@@ -20,20 +26,27 @@ body {
 .logo {
   display: block;
   width: 100%;
-  max-width: 1200px;
   height: auto;
   object-fit: cover;
   object-position: center;
-  margin: 0 auto;
 }
 
+/* Media query per schermi più grandi (min-width: 768px) che influenzano il logo */
 @media (min-width: 768px) {
-  .logo {
-    max-width: 1200px;
+   .logo-container {
+      max-width: 1400px;
   }
 }
 
-/** INTESTAZIONE **/
+/* --- SPAZIO BIANCO --- */
+/* Stili per il div usato come spaziatore con sfondo bianco */
+.spacer {
+  height: 30px; /* Regola l'altezza desiderata per lo spazio */
+  background-color: white; /* Imposta lo sfondo su bianco */
+}
+
+/* --- BENVENUTO E SOTTOTESTO --- */
+/* Stili per il messaggio di benvenuto principale */
 .benvenuto {
   font-size: 2.5rem;
   font-weight: bold;
@@ -41,12 +54,14 @@ body {
   color: black;
 }
 
+/* Stili per il testo evidenziato e la visualizzazione del saldo */
 .highlight,
 .saldo {
   color: blue;
   font-weight: bold;
 }
 
+/* Stili per il sottotesto sotto l'intestazione principale */
 .sottotesto {
   font-size: 1.4rem;
   font-weight: 600;
@@ -55,13 +70,8 @@ body {
   display: inline-block;
 }
 
-.vincente {
-  color: blue;
-  font-weight: bold;
-  font-size: 1.6rem;
-}
-
-/** VISUALIZZA CARD CAVALLI **/
+/* --- VISUALIZZA CARD CAVALLI --- */
+/* Stili per il contenitore che ospita tutte le card dei cavalli */
 .cavalli {
   display: flex;
   flex-wrap: wrap;
@@ -71,10 +81,11 @@ body {
   max-width: 1000px;
 }
 
+/* Stili per le singole card dei cavalli */
 .cavallo-card {
   width: calc(20% - 15px);
-  background-color: #4682B4;
-  box-shadow: 0 0 5px #66c2ff;
+  background-color: #455A64; /* Un grigio-blu scuro */
+  box-shadow: 0 0 8px rgba(69, 90, 100, 0.7);
   border-radius: 15px;
   padding: 5px;
   min-height: 150px;
@@ -87,11 +98,14 @@ body {
   transition: transform 0.2s, box-shadow 0.2s;
 }
 
+/* Effetto hover per le card dei cavalli */
 .cavallo-card:hover {
   transform: scale(1.05);
-  box-shadow: 0 0 15px #90e0ef;
+  box-shadow: 0 0 20px rgba(69, 90, 100, 0.9);
 }
 
+
+/* Stili per il nome del cavallo all'interno della card */
 .nome-cavallo {
   color: white;
   font-weight: bold;
@@ -102,6 +116,7 @@ body {
   text-overflow: ellipsis;
 }
 
+/* Stili per la barra di progresso/stato all'interno della card */
 .barra {
   height: 10px;
   margin: 10px 0;
@@ -110,6 +125,7 @@ body {
   background-color: #87CEEB;
 }
 
+/* Media queries per il layout responsivo delle card dei cavalli su schermi più piccoli */
 @media (max-width: 768px) {
   .cavallo-card {
     width: calc(50% - 15px);
@@ -122,7 +138,8 @@ body {
   }
 }
 
-/** GIOCATA **/
+/* --- SEZIONE SCOMMESSE (GIOCATA) --- */
+/* Stili per la sezione principale di input e pulsanti per le scommesse */
 .giocata {
   display: flex;
   justify-content: center;
@@ -133,6 +150,7 @@ body {
   margin: 40px 0 20px;
 }
 
+/* Stili per il titolo della sezione scommesse */
 .giocata-titolo {
   font-size: 1.5rem;
   color: black;
@@ -143,6 +161,7 @@ body {
   margin: 0;
 }
 
+/* Stili per il wrapper del campo di input dell'importo */
 .giocata-input-wrapper {
   display: flex;
   justify-content: center;
@@ -151,6 +170,7 @@ body {
   margin: 0;
 }
 
+/* Stili per il campo di input dell'importo della scommessa */
 .input-importo {
   padding: 5px 5px;
   font-size: 1.5rem;
@@ -161,11 +181,13 @@ body {
   width: 42%;
 }
 
+/* Effetto focus per il campo di input dell'importo */
 .input-importo:focus {
   border-color: #ffaa33;
   box-shadow: 0 0 10px rgba(255, 170, 51, 0.6);
 }
 
+/* Stili per le righe/colonne di bottoni */
 .bottoni-riga,
 .bottoni-colonna {
   display: flex;
@@ -174,16 +196,19 @@ body {
   margin-top: 10px;
 }
 
+/* Allineamento per le righe di bottoni orizzontali */
 .bottoni-riga {
   justify-content: center;
 }
 
+/* Allineamento per le colonne di bottoni verticali */
 .bottoni-colonna {
   flex-direction: column;
   text-align: center;
   margin-bottom: 60px;
 }
 
+/* Stili generali per tutti i bottoni */
 button {
   font-size: 1.4rem;
   font-weight: bold;
@@ -195,20 +220,24 @@ button {
   width: 100%;
 }
 
+/* Effetto hover per tutti i bottoni */
 button:hover {
   transform: scale(1.05);
 }
 
+/* Stili specifici per i bottoni verdi */
 .btn-verde {
   background-color: #28a745;
   color: white;
 }
 
+/* Effetto hover per i bottoni verdi */
 .btn-verde:hover {
   background-color: #3ed657;
   color: black;
 }
 
+/* Stili specifici per i bottoni blu */
 .btn-blu {
   margin-right: 15px;
   padding: 20px 24px;
@@ -222,20 +251,24 @@ button:hover {
   transition: transform 0.2s, box-shadow 0.2s;
 }
 
+/* Effetto hover per i bottoni blu */
 .btn-blu:hover {
   transform: scale(1.05);
   box-shadow: 0 0 10px orange;
 }
 
+/* Stili specifici per i bottoni di reset */
 .btn-reset {
   background-color: #dc3545;
   color: white;
 }
 
+/* Effetto hover per i bottoni di reset */
 .btn-reset:hover {
   background-color: #ff4d4d;
 }
 
+/* Stili specifici per i bottoni "altro" */
 .altro-btn {
   background-color: #444;
   color: white;
@@ -246,12 +279,14 @@ button:hover {
   cursor: pointer;
 }
 
+/* Effetto hover per i bottoni "altro" */
 .altro-btn:hover {
   background-color: orange;
   color: black;
 }
 
-/** MESSAGGIO DI CONFERMA **/
+/* --- MESSAGGIO DI CONFERMA --- */
+/* Stili per l'overlay a schermo intero del messaggio di conferma */
 .messaggio-conferma {
   position: fixed;
   top: 0;
@@ -266,6 +301,7 @@ button:hover {
   animation: fadeIn 0.5s ease-in-out;
 }
 
+/* Stili per il contenitore del messaggio di conferma */
 .contenuto-messaggio {
   background: #ffffff;
   padding: 30px;
@@ -283,11 +319,13 @@ button:hover {
   max-height: 90vh;
 }
 
+/* Stili per gli span evidenziati all'interno del contenuto del messaggio di conferma */
 .contenuto-messaggio span {
   color: #1E90FF;
   font-weight: bold;
 }
 
+/* Stili per il bottone di chiusura all'interno del messaggio di conferma */
 .btn-chiudi {
   margin-top: 25px;
   margin-right: 15px;
@@ -301,17 +339,20 @@ button:hover {
   transition: transform 0.2s, box-shadow 0.2s;
 }
 
+/* Effetto hover per il bottone di chiusura */
 .btn-chiudi:hover {
   transform: scale(1.1);
   box-shadow: 0 0 10px #1E90FF;
 }
 
-/** Animazioni **/
+/* --- ANIMAZIONI --- */
+/* Animazione keyframe per l'apparizione graduale degli elementi */
 @keyframes fadeIn {
   from { opacity: 0; }
   to { opacity: 1; }
 }
 
+/* Animazione keyframe per lo zoom in degli elementi */
 @keyframes zoomIn {
   from {
     transform: scale(0.9);
@@ -323,7 +364,8 @@ button:hover {
   }
 }
 
-/** STILE MESSAGGIO **/
+/* --- STILE MESSAGGIO --- */
+/* Stili per il titolo di vari messaggi/modali */
 .titolo-messaggio {
   font-size: 36px;
   font-weight: bold;
@@ -333,12 +375,14 @@ button:hover {
   text-align: center;
 }
 
+/* Stili per gli span evidenziati all'interno dei titoli dei messaggi */
 .titolo-span {
   color: #1E90FF;
   font-weight: bold;
   font-size: 36px;
 }
 
+/* Stili per il contenitore del risultato/esito */
 .esito-container {
   display: flex;
   flex-direction: column;
@@ -349,17 +393,20 @@ button:hover {
   padding: 50px;
 }
 
+/* Stili per il testo del messaggio di esito */
 .messaggio-esito {
   font-size: 26px;
 }
 
+/* Stili per il testo evidenziato all'interno del messaggio di esito */
 .messaggio-esito-testo {
   font-size: 26px;
   color: #1E90FF;
   font-weight: bold;
 }
 
-/** TABELLA **/
+/* --- TABELLA --- */
+/* Stili per la tabella delle statistiche */
 .tabella-statistiche {
   width: 98%;
   margin: 20px auto;
@@ -367,6 +414,7 @@ button:hover {
   font-size: 16px;
 }
 
+/* Stili per le intestazioni della tabella e le celle di dati */
 .tabella-statistiche th,
 .tabella-statistiche td {
   border: 1px solid #ccc;
@@ -374,11 +422,13 @@ button:hover {
   text-align: left;
 }
 
+/* Stili per lo sfondo e il colore del testo delle intestazioni della tabella */
 .tabella-statistiche th {
   background-color: #f0f0f0;
   color: #333;
 }
 
+/* Colore di sfondo alternato per le righe della tabella per una migliore leggibilità */
 .tabella-statistiche tr:nth-child(even) {
   background-color: #f9f9f9;
 }
