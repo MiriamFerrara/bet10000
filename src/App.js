@@ -3,15 +3,15 @@ import './App.css';
 import logo from './assets/logo-2.png';
 import horse from './assets/horse.png';
 const cavalliIniziali = [
-  { nome: 'FURIA', colore: '#28a745' },         // Verde smeraldo
-  { nome: 'TEMPESTA', colore: '#ffc107' },      // Giallo ambra
-  { nome: 'SPIRIT', colore: '#17a2b8' },        // Azzurro intenso
-  { nome: 'FULMINE', colore: '#fd7e14' },       // Arancione vivace
-  { nome: 'SAETTA', colore: '#007bff' },        // Blu vivo
+  { nome: 'EDEN', colore: '#28a745' },         // Verde smeraldo
+  { nome: 'STORM', colore: '#ffc107' },      // Giallo ambra
+  { nome: 'SKY BLUE', colore: '#17a2b8' },        // Azzurro intenso
+  { nome: 'ALEXANDER', colore: '#fd7e14' },       // Arancione vivace
+  { nome: 'RED RUM', colore: '#007bff' },        // Blu vivo
   { nome: 'SCACCO MATTO', colore: '#dc3545' },  // Rosso acceso
   { nome: 'DRAGO', colore: '#6f42c1' },         // Viola brillante
-  { nome: 'LUNA', colore: '#f78fb3' },          // Rosa delicato
-  { nome: 'RED RUM', colore: '#f8f9fa' },       // Bianco ghiaccio
+  { nome: 'ASTRO', colore: '#f78fb3' },          // Rosa delicato
+  { nome: 'SAETTA', colore: '#f8f9fa' },       // Bianco ghiaccio
   { nome: 'PEGASO', colore: '#ffd700' },        // Oro classico
   { nome: 'NERONE', colore: '#343a40' },        // Grigio antracite
   { nome: 'TUONO', colore: '#7bed9f' },         // Verde menta
@@ -19,7 +19,7 @@ const cavalliIniziali = [
   { nome: 'VENTO', colore: '#74b9ff' },         // Celeste tenue
   { nome: 'TITANO', colore: '#a0522d' },        // Marrone seppia
   { nome: 'GOLIATH', colore: '#ced4da' },       // Argento chiaro
-  { nome: 'ASTRO', colore: '#3f51b5' },         // Blu indaco
+  { nome: 'LUNA', colore: '#3f51b5' },         // Blu indaco
   { nome: 'COMETA', colore: '#6610f2' },        // Viola profondo
   { nome: 'FENICE', colore: '#e83e8c' },        // Rosa fuoco
   { nome: 'ZEFIRO', colore: '#20c997' }         // Verde acqua
