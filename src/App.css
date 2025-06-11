@@ -6,7 +6,7 @@ html, body {
 
 body {
   font-family: Arial, sans-serif;
-  background: #d8ffff; /* Colori scelti per replicare la sfumatura dell'immagine */
+  background: #b3e2f1; /* Colori scelti per replicare la sfumatura dell'immagine */
    color: #000; /* Il colore del testo principale */
    text-align: center;
    overflow-x: hidden;
@@ -40,7 +40,7 @@ body {
 /* --- SPAZIO BIANCO --- */
 /* Stili per il div usato come spaziatore con sfondo bianco */
 .spacer {
-  height: 30px; /* Regola l'altezza desiderata per lo spazio */
+  height: 40px; /* Regola l'altezza desiderata per lo spazio */
   background-color: white; /* Imposta lo sfondo su bianco */
 }
 
@@ -388,7 +388,6 @@ button:hover {
   align-items: center;
   justify-content: center;
   text-align: center;
-  margin-top: 50px;
   padding: 50px;
 }
 
@@ -400,40 +399,12 @@ button:hover {
 /* Stili per il testo evidenziato all'interno del messaggio di esito */
 .messaggio-esito-testo {
   font-size: 26px;
-  color: #1E90FF;
+  color: blue;
   font-weight: bold;
 }
 
-/* --- TABELLA --- */
-/* Stili per la tabella delle statistiche */
-/* Stili per la tabella delle statistiche */
-.tabella-statistiche {
-  width: 98%;
-  margin: 20px auto;
-  border-collapse: collapse;
-  font-size: 16px;
-}
-
-/* Stili per le intestazioni della tabella e le celle di dati */
-.tabella-statistiche th,
-.tabella-statistiche td {
-  border: 1px solid #a0a0a0; /* A slightly darker gray for borders */
-  padding: 8px 12px;
-  text-align: left;
-}
-
-/* Stili per lo sfondo e il colore del testo delle intestazioni della tabella */
-.tabella-statistiche th {
-  background-color: #4CAF50; /* A vibrant green */
-  color: #ffffff; /* White text for contrast */
-}
-
-/* Colore di sfondo alternato per le righe della tabella per una migliore leggibilità */
-.tabella-statistiche tr:nth-child(even) {
-  background-color: #e8f5e9; /* A very light green for even rows */
-}
-
-/* Default row background color (optional, but good for consistency) */
-.tabella-statistiche tr:nth-child(odd) {
-  background-color: #ffffff; /* White for odd rows */
+.titolo-span-esito {
+  color: blue;
+  font-weight: bold;
+  font-size: 36px;
 }
