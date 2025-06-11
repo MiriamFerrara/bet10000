@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/bet10000/static/css/main.d8141b70.css",
-    "main.js": "/bet10000/static/js/main.19e37f6a.js",
+    "main.css": "/bet10000/static/css/main.98ceaf9a.css",
+    "main.js": "/bet10000/static/js/main.ac85a110.js",
     "static/js/453.a4cb5c95.chunk.js": "/bet10000/static/js/453.a4cb5c95.chunk.js",
-    "static/media/logo-d8ffff.png": "/bet10000/static/media/logo-d8ffff.fff311517caca7d19e82.png",
+    "static/media/logo.png": "/bet10000/static/media/logo.1bdedd9c18bee0427d21.png",
     "static/media/horse.png": "/bet10000/static/media/horse.151a46b49e27be90f5d8.png",
     "index.html": "/bet10000/index.html",
-    "main.d8141b70.css.map": "/bet10000/static/css/main.d8141b70.css.map",
-    "main.19e37f6a.js.map": "/bet10000/static/js/main.19e37f6a.js.map",
+    "main.98ceaf9a.css.map": "/bet10000/static/css/main.98ceaf9a.css.map",
+    "main.ac85a110.js.map": "/bet10000/static/js/main.ac85a110.js.map",
     "453.a4cb5c95.chunk.js.map": "/bet10000/static/js/453.a4cb5c95.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.d8141b70.css",
-    "static/js/main.19e37f6a.js"
+    "static/css/main.98ceaf9a.css",
+    "static/js/main.ac85a110.js"
   ]
 }
