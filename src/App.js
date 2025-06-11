@@ -133,6 +133,7 @@ function App() {
   const handleScommettiDiNuovo = useCallback(() => {
     setMostraPaginaScommessa(true);
     setMostraMessaggioEsito(false);
+     setErroreInput('');
     setGiocata(saldo.toString()); // Pre-popola la giocata con il saldo attuale
   }, [saldo]); // saldo è una dipendenza
 
@@ -173,6 +174,7 @@ function App() {
     setSaldo(Number(tempSaldo));
     setGiocata(tempSaldo.toString());
     setCavalliGara(cavalliIniziali.slice(0, Number(tempNumeroCavalli)));
+    setErroreInput(''); // <-- AGGIUNTO: Cancella gli errori di input quando le nuove impostazioni vengono confermate
 
     if (tempEsito === 'si') setEsitoDesiderato(true);
     else if (tempEsito === 'no') setEsitoDesiderato(false);
