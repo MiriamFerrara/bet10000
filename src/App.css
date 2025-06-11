@@ -6,12 +6,11 @@ html, body {
 
 body {
   font-family: Arial, sans-serif;
-  background: linear-gradient(to right,#5DE1E6, #2B90C8, #004AAD); /* Colori scelti per replicare la sfumatura dell'immagine */
+  background: #d8ffff; /* Colori scelti per replicare la sfumatura dell'immagine */
    color: #000; /* Il colore del testo principale */
    text-align: center;
    overflow-x: hidden;
    min-height: 100vh; /* Assicura che la sfumatura copra l'intera altezza del viewport */
-
 }
 
 /* --- INTESTAZIONE --- */
@@ -84,7 +83,7 @@ body {
 /* Stili per le singole card dei cavalli */
 .cavallo-card {
   width: calc(20% - 15px);
-  background-color: #455A64; /* Un grigio-blu scuro */
+  background-color: #1E90FF; /* Un grigio-blu scuro */
   box-shadow: 0 0 8px rgba(69, 90, 100, 0.7);
   border-radius: 15px;
   padding: 5px;
@@ -407,6 +406,7 @@ button:hover {
 
 /* --- TABELLA --- */
 /* Stili per la tabella delle statistiche */
+/* Stili per la tabella delle statistiche */
 .tabella-statistiche {
   width: 98%;
   margin: 20px auto;
@@ -417,18 +417,23 @@ button:hover {
 /* Stili per le intestazioni della tabella e le celle di dati */
 .tabella-statistiche th,
 .tabella-statistiche td {
-  border: 1px solid #ccc;
+  border: 1px solid #a0a0a0; /* A slightly darker gray for borders */
   padding: 8px 12px;
   text-align: left;
 }
 
 /* Stili per lo sfondo e il colore del testo delle intestazioni della tabella */
 .tabella-statistiche th {
-  background-color: #f0f0f0;
-  color: #333;
+  background-color: #4CAF50; /* A vibrant green */
+  color: #ffffff; /* White text for contrast */
 }
 
 /* Colore di sfondo alternato per le righe della tabella per una migliore leggibilità */
 .tabella-statistiche tr:nth-child(even) {
-  background-color: #f9f9f9;
+  background-color: #e8f5e9; /* A very light green for even rows */
+}
+
+/* Default row background color (optional, but good for consistency) */
+.tabella-statistiche tr:nth-child(odd) {
+  background-color: #ffffff; /* White for odd rows */
 }
